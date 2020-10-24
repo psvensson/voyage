@@ -1,3 +1,3 @@
 versions
-idFromSerialized: serialized
-	self subclassResponsibility 
+idFromSerialized: jsonDictionary
+	^ jsonDictionary at: self fieldRootId

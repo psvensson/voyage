@@ -29,6 +29,8 @@ baseline: spec
 			"ejdb"
 			package: 'Voyage-EJDB' with: [ spec requires: #('EJDB' 'Voyage-Model-Core') ];
 			package: 'Voyage-EJDB-Tests';
+			"firestore"
+			package: 'Voyage-Firestore' with: [ spec requires: #('firebase-st' 'Voyage-Model-Core') ];
 			"unqlite"
 			package: 'Voyage-UnQLite' with: [ spec requires: #('PunQLite' 'Voyage-Model-Core') ];
 			package: 'Voyage-UnQLite-Tests';
@@ -49,6 +51,6 @@ baseline: spec
 			group: 'unqlite' with: #('Voyage-JSON' 'Voyage-UnQLite');
 			group: 'unqlite tests' with: #('unqlite' 'Voyage-Model-Tests' 'Voyage-JSON-Tests' 'Voyage-UnQLite-Tests');
 			group: 'ejdb' with: #('Voyage-JSON' 'Voyage-EJDB');
-			group: 'ejdb tests' with: #('ejdb' 'Voyage-Model-Tests' 'Voyage-JSON-Tests' 'Voyage-EJDB-Tests') 
-			
+			group: 'ejdb tests' with: #('ejdb' 'Voyage-Model-Tests' 'Voyage-JSON-Tests' 'Voyage-EJDB-Tests') ;
+			group: 'Voyage-Firestore' with: #('Voyage-Firestore')
 			].
